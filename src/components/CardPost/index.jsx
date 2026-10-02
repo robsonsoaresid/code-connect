@@ -22,13 +22,11 @@ export const CardPost = ({ post }) => {
 
 
   const handleLikeButton = () => {
-
     http.post(`blog-posts/${post.id}/like`)
     .then(() => {
           setLikes((oldState) => oldState + 1);
           console.log("íncrementar like");
     })
-    
   };
 
   return (
